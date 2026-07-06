@@ -1,12 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Manager Application</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header>
+        <h1>📋 Task Manager</h1>
+
+        <button id="themeBtn" data-theme="light">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+    <!-- Task Form -->
+
+    <section class="task-form">
+
+        <h2>Add New Task</h2>
+
+        <form id="taskForm">
+
+            <input
+                type="text"
+                id="taskTitle"
+                placeholder="Enter Task"
+                value=""
+                required
+            >
+
+            <select id="category">
+
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+
+            </select>
+
+            <button type="submit">
+                Add Task
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="searchBox">
+
+        <input
+            type="text"
+            id="searchTask"
+            placeholder="Search Task..."
+        >
+
+    </section>
+
+    <!-- Filter -->
+
+    <section>
+
+        <select id="filterCategory">
+
+            <option value="All">All Categories</option>
+            <option value="Study">Study</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Shopping">Shopping</option>
+
+        </select>
+
+    </section>
+
+    <!-- Counter -->
+
+    <section class="counter">
+
+        <p>✅ Completed :
+            <span id="completedCount">0</span>
+        </p>
+
+        <p>⌛ Pending :
+            <span id="pendingCount">0</span>
+        </p>
+
+        <button id="clearAll">
+            Clear All Tasks
+        </button>
+
+    </section>
+
+    <!-- Task Container -->
+
+    <section>
+
+        <h2>Your Tasks</h2>
+
+        <div id="taskContainer">
+
+        </div>
+
+    </section>
+
+    <!-- Attributes vs Properties -->
+
+    <section class="attribute-demo">
+
+        <h2>Attributes vs Properties</h2>
+
+        <input
+            id="demoInput"
+            type="text"
+            value="Original Value"
+        >
+
+        <button id="attributeBtn">
+            Check Difference
+        </button>
+
+        <p>
+            Open Console to see the result.
+        </p>
+
+    </section>
+
+    <!-- Event Propagation -->
+
+    <section>
+
+        <h2>Event Bubbling & Capturing Demo</h2>
+
+        <div id="grandparent" class="grandparent">
+
+            Grandparent
+
+            <div id="parent" class="parent">
+
+                Parent
+
+                <button id="childBtn">
+                    Child Button
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Browser Rendering Pipeline -->
+
+    <section class="pipeline">
+
+        <h2>Browser Rendering Pipeline</h2>
+
+        <div class="flow">
+
+            <div class="box">HTML</div>
+
+            <span>⬇</span>
+
+            <div class="box">Parsing</div>
+
+            <span>⬇</span>
+
+            <div class="box">Tokenization</div>
+
+            <span>⬇</span>
+
+            <div class="box">DOM Tree</div>
+
+            <span>+</span>
+
+            <div class="box">CSS</div>
+
+            <span>⬇</span>
+
+            <div class="box">CSSOM Tree</div>
+
+            <span>⬇</span>
+
+            <div class="box final">
+                Render Tree
+            </div>
+
+        </div>
+
+    </section>
+
     <script src="script.js"></script>
+
 </body>
 </html>
